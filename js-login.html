@@ -1,0 +1,123 @@
+<span style="display:none;">
+
+</span>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/signin.css">
+	<title> Sign Up | Test </title>
+    <link rel="icon" href="../img/Logo1.png" type="image">
+
+</head>
+<body>
+
+<button id="press"  class="butt">Sign Up</button>
+
+<div class="container" id="container">
+	<form action="" method="POST" class="form" id="form">
+      <button id="ifoto"> <img src="./img/img.png" alt="" ></button> 
+		<h1>Sign Up</h1>
+		<div class="group ">
+		<p for="">Names</p>
+		<input type="text" name="name" id="name" placeholder="Enter Your Names">
+        <small>Error Message</small>
+	</div>
+	<div class="group">
+		<p for="">Email</p>
+		<input type="text" name="email" id="email" placeholder="Enter Your Email">
+		<small>Error Message</small>
+	</div>
+	<div class="group">
+
+		<p for="">Password</p>
+		<input type="password" class="none" name="pw" id="password" placeholder="Enter Your Password">
+		<small>Error Message</small>
+	</div>		
+	<div class="group">
+
+		<p for="">Date Of Birth</p>
+		<input type="date" name="date" id="date">
+		<small>Error Message</small>
+	</div>
+	<div class="group">
+		<div>
+		<p>Gender:&nbsp;
+			&nbsp;Male&nbsp;<input type="radio" name="gender" value="male">
+			&nbsp;Female&nbsp;<input type="radio" name="gender" value="female">
+		</p>	
+	</div>
+	<small>Error Message</small>
+	</div>
+	<div class="group">
+		<input type="submit" value="Sign Up" name="signUp">
+	</div>
+	<div class="group">
+	<p>	Already have an account click here to <a href="./signin.html" class="Sign">sign in</a></p>
+	</div>
+	</form>
+</div>
+</body>
+<script type="text/javascript">
+	const form = document.getElementById('form');
+	const  name = document.getElementById('name');
+	const  email = document.getElementById('email');
+	const  password = document.getElementById('password');
+	const  date = document.getElementById('date');
+	form.addEventListener('submit',(e)=>{
+		e.preventDefault();
+
+		checkInputs();
+	})
+
+	function checkInputs(){
+const nameValue = name.value.trim()
+const emailValue = email.value.trim()
+const passwordValue = password.value.trim()
+const dateValue = date.value.trim();
+if(nameValue === ''){
+	setErrorFor(name,"Please Enter Your  Name");
+}else{
+		setSuccessFor(name);
+	}
+
+if(emailValue === ''){
+	setErrorFor(email,"Please Enter Your Email");
+}else{
+		setSuccessFor(email);
+	}
+
+if(passwordValue === ''){
+	setErrorFor(password,"Please Enter Your Password");
+}else{
+		setSuccessFor(password);
+	}
+if(dateValue === ''){
+	setErrorFor(date,"Please Enter Your Date");
+}else{
+		setSuccessFor(date);
+	}
+	}
+	function setErrorFor(input,message){
+		const formControl = input.parentElement;
+		const small = formControl.querySelector('small');
+		small.innerText = message;
+		formControl.className = 'group Error'
+	}
+function setSuccessFor(input){
+	const formControl = input.parentElement;
+	formControl.className = 'group Success'
+}
+document.getElementById('press').addEventListener("click",()=>{
+document.querySelector("#container").style.display = "flex";
+});
+document.getElementById('ifoto').addEventListener('click',()=>{
+    document.querySelector("#container").style.display = "none";
+});
+
+
+
+</script>
+
+</html>

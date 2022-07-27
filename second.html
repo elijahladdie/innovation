@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seconds</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(34deg,darkblue,silver);    
+        }
+        div{
+            width:40vh;
+            height: 20vh;
+            background: white;
+            border-radius: 10px;
+            box-shadow:  0px 0px 35px cyan;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-transform: capitalize;
+            font-size:150px;
+            margin: 0px 20px;
+        }
+        #di{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div"></div>
+
+    <div id="di"></div>
+</body>
+<script >
+let div = document.getElementById("div");
+let di = document.getElementById("di");
+min()
+let reverse = 0 ;
+function min(){
+    let date = new Date();
+    setTimeout(min,12);
+    let sec= date.getSeconds();
+    div.textContent = sec;
+    if(sec === 00){
+     di.textContent = "New Minute Is " + date.getMinutes()+" Enjoy You Minute!!!🤔😆🤔🤔😆😆" 
+        div.style.backgroundColor =" red";
+        di.style.backgroundColor ="green";
+    }else{
+        div.style.backgroundColor ="white";
+        di.textContent = "Clock is Ticking";
+
+    }
+    if(sec += 1){
+        if(sec % 2 === 0){
+            di.style.backgroundColor ="white";
+        }
+        else{
+            di.style.backgroundColor ="green";
+        }
+    }
+    
+
+}
+console.log(reverse)
+
+
+</script>
+</html>
