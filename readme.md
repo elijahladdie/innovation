@@ -1,4 +1,4 @@
-# Blackcoffer Admin dashboard
+#  Admin dashboard
 
 ## Getting Started
 
