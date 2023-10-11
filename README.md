@@ -1,4 +1,3 @@
-# innovation
-Drum Machine,Form and Time Machine
-Fees pay app Designed in php
+# Learning Typescript
+Contain Finance logger app
 
