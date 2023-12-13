@@ -12,7 +12,7 @@ const App = () => {
 
   const getData = async () => {
     try{
-      const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=17350559b0864dbe8b872846231312&q=${value}`);
+      const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=17350559b0864dbe8b872846231312&q=${value}`);
       if (!response.ok) {
         return Swal.fire({
           title: "🤔🤔🤔🤔🤔🤔",
