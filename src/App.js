@@ -36,12 +36,18 @@ const App = () => {
   const handleClick = () => {
     if (value !== "") {
       getData();
+    }else{
+        return Swal.fire({
+          title: "🤔🤔🤔🤔🤔🤔",
+          text: `Reminder💡 provide the city name🙂`,
+          icon: "error"
+        });
+      
     }
   }
-  console.log()
   return (
     <div className="bg-gradient-to-r  from-cyan-500 to-blue-500 h-screen flex items-center justify-evenly flex-col ">
-        <h1 className="font-tahoma text-2xl transition-shadow mix-blend-multiply  drop-shadow-lg hover:drop-shadow-lg rounded-lg text-white  border-slate-600 p-6 bg-gradient-to-tl">
+        <h1 className="font-tahoma text-2xl transition-shadow drop-shadow-lg hover:drop-shadow-lg rounded-lg text-white  border-slate-600 p-6 bg-gradient-to-tl">
           Weather app
         </h1>
       <div className="flex justify-center">
